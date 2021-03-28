@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SmartBike</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="video_button">Video Record Button</string>
+    <string name="camera_button">Camera Capture Button</string>
+
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample demonstrates how to record video using Camera2 API.
+
+
+        ]]>
+    </string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+</resources>
+

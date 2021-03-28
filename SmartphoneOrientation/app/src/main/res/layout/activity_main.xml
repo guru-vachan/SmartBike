@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5sp"
+    android:paddingTop="?attr/actionBarSize">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/firstLayout">
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/xValue" />
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/yValue" />
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zValue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/secondLayout"
+        android:layout_below="@+id/firstLayout"
+        android:layout_marginTop="10sp">
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/xGyroValue"/>
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/yGyroValue" />
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zGyroValue"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/thirdLayout"
+        android:layout_below="@+id/secondLayout"
+        android:layout_marginTop="10sp">
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/latitiude"
+
+            />
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/longitude"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/thirdLayout"
+        android:text="Enable Video Recording"
+        />
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox"
+        android:layout_marginTop="50sp"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_start"
+        android:layout_marginTop="40sp"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/btn_export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_stop"
+        android:layout_marginTop="40sp"
+        android:onClick="export"
+        android:text="Export Data" />
+
+
+
+
+</RelativeLayout>
